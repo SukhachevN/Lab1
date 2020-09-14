@@ -14,7 +14,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="Button" />
 
         <ImageView
@@ -22,14 +21,12 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="150dp"
             android:layout_weight="1"
-            android:gravity="center"
             app:srcCompat="@android:drawable/ic_search_category_default" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="textview" />
     </LinearLayout>
 </LinearLayout>
