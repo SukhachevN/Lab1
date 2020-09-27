@@ -7,13 +7,15 @@ import android.util.Log;
 
 import com.example.lab2.R;
 
+import static com.example.lab2.R.layout.activity_main;
+
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
         Log.d(TAG, "onCreate");
     }
 
