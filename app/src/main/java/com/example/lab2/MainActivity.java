@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.lab1.R;
+import com.example.lab2.R;
 
 public class MainActivity extends AppCompatActivity {
 
