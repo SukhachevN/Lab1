@@ -1,9 +1,11 @@
-package com.example.lab1;
+package com.example.lab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import com.example.lab1.R;
 
 public class MainActivity extends AppCompatActivity {
 
