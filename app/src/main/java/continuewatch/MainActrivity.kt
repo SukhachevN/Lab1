@@ -12,12 +12,10 @@ class MainActivity : AppCompatActivity() {
     var work = true
     private lateinit var state: SharedPreferences
     var backgroundThread = Thread {
-        while (true) {
-            while (work) {
-                Thread.sleep(1000)
-                textSecondsElapsed.post {
-                    textSecondsElapsed.setText("Seconds elapsed: " + secondsElapsed++)
-                }
+        while (work) {
+            Thread.sleep(1000)
+            textSecondsElapsed.post {
+                textSecondsElapsed.setText("Seconds elapsed: " + secondsElapsed++)
             }
         }
     }
@@ -27,23 +25,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Log.d("test", "onCreate()")
         backgroundThread.start()
-        state=applicationContext.getSharedPreferences("state",
+        state = applicationContext.getSharedPreferences("state",
                 MODE_PRIVATE)
     }
 
     override fun onResume() {
         super.onResume()
         Log.d("test", "onResume()")
-        secondsElapsed=state.getInt("seconds",0)
-        work=true
+        secondsElapsed = state.getInt("seconds", 0)
+        work = true
 
     }
+
     override fun onPause() {
         super.onPause()
         Log.d("test", "onPause()")
-        work=false
-        val save=state.edit()
-        save.putInt("seconds",secondsElapsed)
+        work = false
+        val save = state.edit()
+        save.putInt("seconds", secondsElapsed)
         save.commit()
     }
 }
