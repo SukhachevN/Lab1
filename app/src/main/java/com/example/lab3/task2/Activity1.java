@@ -2,25 +2,36 @@ package com.example.lab3.task2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import static com.example.lab3.R.layout.*;
-import static com.example.lab3.R.*;
 
-public class Activity1 extends AppCompatActivity implements View.OnClickListener {
-    Button btnName;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(task2_activity1);
-        btnName = (Button) findViewById(id.buttonActivity1);
-        btnName.setOnClickListener(this);
-    }
+import com.example.lab3.databinding.Task2Activity1Binding;
+import com.google.android.material.navigation.NavigationView;
+
+public class Activity1 extends AppCompatActivity {
+    Task2Activity1Binding binding;
 
     @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(this, Activity2.class);
-        startActivityForResult(intent, 1);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = Task2Activity1Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.buttonActivity1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(Activity1.this, Activity2.class), 1);
+                finish();
+            }
+        });
+        binding.navView1.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                startActivity(new Intent(Activity1.this, ActivityAbout.class));
+                return true;
+            }
+        });
     }
 }

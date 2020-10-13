@@ -11,4 +11,9 @@
     <string name="menu_home">activity1</string>
     <string name="menu_gallery">activity2</string>
     <string name="menu_slideshow">activity3</string>
+    <string name="to_second">to second</string>
+    <string name="activity_about">Activity about</string>
+    <string name="to_third">to third</string>
+    <string name="to_first">to first</string>
+    <string name="about">about</string>
 </resources>

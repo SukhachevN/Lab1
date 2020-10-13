@@ -4,12 +4,14 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.example.lab3.R.layout.task2_activity3;
+import com.example.lab3.databinding.Task2ActivityAboutBinding;
 
 public class ActivityAbout extends AppCompatActivity {
+    Task2ActivityAboutBinding binding;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(task2_activity3);
+        binding = Task2ActivityAboutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 }
