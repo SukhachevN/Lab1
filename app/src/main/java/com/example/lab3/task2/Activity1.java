@@ -23,7 +23,6 @@ public class Activity1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivityForResult(new Intent(Activity1.this, Activity2.class), 1);
-                finish();
             }
         });
         binding.navView1.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

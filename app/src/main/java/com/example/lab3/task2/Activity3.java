@@ -22,14 +22,12 @@ public class Activity3 extends AppCompatActivity {
         binding.buttonActivity3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(Activity3.this, Activity1.class), 1);
                 finish();
             }
         });
         binding.button2Activity3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(Activity3.this, Activity3.class), 1);
                 finish();
             }
         });

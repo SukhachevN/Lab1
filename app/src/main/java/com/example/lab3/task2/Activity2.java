@@ -22,7 +22,6 @@ public class Activity2 extends AppCompatActivity {
         binding.buttonActivity2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(Activity2.this, Activity1.class), 1);
                 finish();
             }
         });
@@ -30,7 +29,6 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivityForResult(new Intent(Activity2.this, Activity3.class), 1);
-                finish();
             }
         });
         binding.navView2.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
