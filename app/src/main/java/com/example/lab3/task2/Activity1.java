@@ -22,7 +22,7 @@ public class Activity1 extends AppCompatActivity {
         binding.buttonActivity1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(Activity1.this, Activity2.class), 1);
+                startActivity(new Intent(Activity1.this, Activity2.class));
             }
         });
         binding.navView1.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
