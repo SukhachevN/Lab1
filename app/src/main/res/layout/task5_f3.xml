@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonActivity3"
+            android:layout_width="280dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="68dp"
+            android:layout_gravity="center"
+            android:text="@string/to_first" />
+
+        <Button
+            android:id="@+id/button2Activity3"
+            android:layout_width="280dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:text="@string/to_second" />
+
+    </LinearLayout>
+</layout>
